@@ -6,6 +6,4 @@
 const BASE_URL = process.env.REACT_APP_BASE_URL
 const TIME_OUT = 10000
 
-console.log(process.env.REACT_APP_BASE_URL)
-
 export { BASE_URL, TIME_OUT }

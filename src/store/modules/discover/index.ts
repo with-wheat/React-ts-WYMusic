@@ -1,4 +1,4 @@
-import { createSlice } from '@reduxjs/toolkit'
+import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 
 const discoverSlice = createSlice({
   name: 'discover',
@@ -6,7 +6,7 @@ const discoverSlice = createSlice({
     name: 'ssss'
   },
   reducers: {
-    setName(state, { payload }) {
+    setName(state, { payload }: PayloadAction<string>) {
       state.name = payload
     }
   }

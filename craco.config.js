@@ -9,6 +9,18 @@ module.exports = {
       '@components': pathResolve('src/components')
     }
   },
+  devServer: {
+    // 配置跨域代理
+    proxy: {
+      '/api': {
+        target: 'http://codercba.com:9002',
+        changeOrigin: true,
+        pathRewrite: {
+          '^/api': ''
+        }
+      }
+    }
+  },
   babel: {
     plugins: [['@babel/plugin-proposal-decorators', { legacy: true }]]
   },
