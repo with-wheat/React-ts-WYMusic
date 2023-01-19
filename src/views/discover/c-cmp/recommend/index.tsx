@@ -1,4 +1,7 @@
 import React, { memo, FC, ReactNode, useEffect } from 'react'
+
+import { Button } from 'antd'
+
 import { useAppSelect, appShallowEqual, useAppDispatch } from '@/store'
 import { setName } from '@/store/modules/discover'
 import { getTest } from '@/service/modules/demo'
@@ -19,9 +22,7 @@ const Recommend: FC<propTypes> = () => {
 
   useEffect(() => {
     getTest().then((res) => {
-      console.log('====================================')
       console.log(res)
-      console.log('====================================')
     })
   })
 
@@ -32,6 +33,9 @@ const Recommend: FC<propTypes> = () => {
     <div>
       Recommend--{name}
       <button onClick={() => setNames()}>修改名字</button>
+      <Button type="primary">Primary Button</Button>
+      <Button>Default Button</Button>
+      <Button type="dashed">Dashed Button</Button>
     </div>
   )
 }

@@ -12,7 +12,7 @@ const Recommend = lazy(() => import('@/views/discover/c-cmp/recommend'))
 const Main = lazy(() => import('@/views/main'))
 const Focus = lazy(() => import('@/views/focus'))
 const NotFund = lazy(() => import('@/components/NotFund'))
-const Download = lazy(() => import('@/components/NotFund'))
+const Download = lazy(() => import('@/views/download'))
 
 const route: RouteObject[] = [
   {
@@ -54,7 +54,7 @@ const route: RouteObject[] = [
     ]
   },
   {
-    path: '/main',
+    path: '/mine',
     element: <Main />
   },
   {
